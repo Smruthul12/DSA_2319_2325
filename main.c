@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "stack.h"
-//#include "postfixeval.h"
+#include "postfixeval.h"
 int main()
 {
 	
