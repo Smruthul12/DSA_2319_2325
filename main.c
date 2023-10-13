@@ -11,7 +11,7 @@ int main()
 	
 	do
 	{
-		printf("\nMenu:\n0: Exit \n1: Quicksort sort \n2: Merge sort \n3: Stack");
+		printf("\nMenu:\n0: Exit \n1: Quicksort sort \n2: Merge sort \n3: Stack \n4: Postfix Evaluation \n5: Infix to Postfix ");
 		printf("\nEnter value of n:");
 		scanf("%d", &n);
 
@@ -45,16 +45,25 @@ int main()
 			break;
 
 		case 4:
-			printf("\nPostfix evaluation\n");
+			printf("\nPostfix Evaluation\n");
 			//scanf("%[^\n]s",exp);
             //char exp[] = "231*+9-";
 			char exp[30] ;
             int result;
-			printf("enter postfix expression");
+			printf("Enter postfix expression");
             scanf("%s",exp);
             result= evaluate(exp);  
             printf("Result= %d\n", result);
 			break;
+		
+		case 5:
+			printf("\nInfix to Postfix\n");
+			char postfix[30];
+			printf("Enter infix expression");
+        	scanf("%s",exp);
+        	infixToPostfix(exp, postfix);  
+       		result= evaluate(postfix);  
+        	printf("Result= %d\n", result);
 
 		case 0:
 
