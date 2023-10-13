@@ -1,14 +1,14 @@
 #include <stdio.h>
-//#include "stack.h"
+#include "stack.h"
 //#include "postfixeval.h"
 int main()
 {
 	
 	int n;
 	char exp[100];
+	Stack mystack;
     printf("\nhello.");
-	//Stack mystack;
-	//init(&mystack);
+	
 	do
 	{
 		printf("\nMenu:\n0: Exit \n1: Quicksort sort \n2: Merge sort \n3: Stack");
@@ -25,17 +25,21 @@ int main()
 			break;
 		case 3:
 			printf("\nStack\n");
+			init(&mystack);
 			// push
-			//push(&mystack, 10);
-			//push(&mystack, 29);
-			//push(&mystack, 22);
+	        push(&mystack,50);
+			push(&mystack, 10);
+			push(&mystack, 29);
+			push(&mystack, 22);
 
+			//printf("%d",pop(&mystack));
+			
 			// pop
-			// while (!is_empty(&mystack))
-			// {
-			// 	int item = pop(&mystack);
-			// 	printf("%d\n", item);
-			// }
+			while (!is_empty(&mystack))
+			{
+				int item = pop(&mystack);
+				printf("%d\n", item);
+			}
 			break;
 
 		case 4:
