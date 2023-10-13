@@ -20,9 +20,11 @@ int main()
 		case 1:
 			printf("\nQuicksort sort\n");
 			break;
+
 		case 2:
 			printf("\nMerge sort\n");
 			break;
+            
 		case 3:
 			printf("\nStack\n");
 			init(&mystack);
@@ -45,20 +47,17 @@ int main()
 		case 4:
 			printf("\nPostfix evaluation\n");
 			//scanf("%[^\n]s",exp);
-			char exp[] = "231*+9-";
-
-			// push(&mystack, '2');
-			// push(&mystack, '3');
-			// push(&mystack, '1');
-			// push(&mystack, '*');
-			// push(&mystack, '+');
-			// push(&mystack, '9');
-			// push(&mystack, '-');
-			
-			// Function call
-			//printf("postfix evaluation: %d", evaluatePostfix(exp));
+            //char exp[] = "231*+9-";
+			char exp[30] ;
+            int result;
+			printf("enter postfix expression");
+            scanf("%s",exp);
+            result= evaluate(exp);  
+            printf("Result= %d\n", result);
 			break;
+
 		case 0:
+
 		default:
 			printf("\nNo sorting for you\n");
 			break;
