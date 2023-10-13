@@ -11,7 +11,7 @@ int main()
 	
 	do
 	{
-		printf("\nMenu:\n0: Exit \n1: Quicksort sort \n2: Merge sort \n3: Stack \n4: Postfix Evaluation \n5: Infix to Postfix ");
+		printf("\nMenu:\n0: Exit \n1: Quicksort sort \n2: Merge sort \n3: Stack \n4: Postfix Evaluation \n5: Infix to Postfix \n6: Braket matching: ");
 		printf("\nEnter value of n:");
 		scanf("%d", &n);
 
@@ -64,6 +64,16 @@ int main()
         	infixToPostfix(exp, postfix);  
        		result= evaluate(postfix);  
         	printf("Result= %d\n", result);
+
+		case 6:
+			printf("\nBracket matching\n");
+			printf("Enter expression");          
+			scanf("%s",exp);
+         	if (isMatchingBrackets(exp)) 
+              	printf("Brackets are balanced!\n");
+			else 
+                printf("Brackets are not balanced!\n");
+            
 
 		case 0:
 
