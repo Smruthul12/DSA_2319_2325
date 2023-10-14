@@ -62,7 +62,8 @@ int main()
 
 		case 2:
 			printf("\nMerge sort\n");
-			break;
+			mergesort_();
+   	      	break;
 
 		case 3:
 			printf("\nStack\n");
