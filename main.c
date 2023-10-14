@@ -6,8 +6,6 @@
 #include "bracketmatching.h"
 #include "infixtopostfix.h"
 #include <stdlib.h>
-#include <string.h>
-#include "quicksort.h"
 int main()
 {
 
