@@ -6,6 +6,8 @@
 #include "bracketmatching.h"
 #include "infixtopostfix.h"
 #include <stdlib.h>
+#include <string.h>
+#include "mergesort.h"
 int main()
 {
 
