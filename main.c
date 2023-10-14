@@ -6,6 +6,8 @@
 #include "bracketmatching.h"
 #include "infixtopostfix.h"
 #include <stdlib.h>
+#include <string.h>
+#include "quicksort.h"
 int main()
 {
 
@@ -25,6 +27,37 @@ int main()
 		{
 		case 1:
 			printf("\nQuicksort sort\n");
+			    FILE  *f;
+				FILE *output;
+				char line[100];
+				char word[50];
+				int freq;
+				int capacity= 10;
+				struct WordFrequency wordFrequencyMap[1000]; 
+				int wordCount = 0;
+
+				f = fopen("processed.txt", "r");
+				if(f == NULL)
+					return 1;
+				
+				while(fgets(line, 1000, f)){
+					sscanf( line, "%s %d", word, &freq );
+					strcpy(wordFrequencyMap[wordCount].word, word);
+					wordFrequencyMap[wordCount].frequency  =  freq;
+					wordCount++;
+				}
+				
+				quickSort(wordFrequencyMap,0,wordCount);
+				fclose(f);
+
+				output= fopen("output", "w");
+
+				for(int i=0;i<wordCount;i++){
+					fprintf(output,"%s %d\n",wordFrequencyMap[i].word, wordFrequencyMap[i].frequency);
+				}
+
+				fclose(output);
+				printf("Sorted words written to output");
 			break;
 
 		case 2:
