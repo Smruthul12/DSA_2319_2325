@@ -1,5 +1,5 @@
-#ifndef TREE_H
-#define TREE_H
+#ifndef BINARYTREE_H
+#define BINARYTREE_H
 
 typedef struct Node {
     int data;
@@ -7,15 +7,12 @@ typedef struct Node {
     struct Node* right;
 } Node;
 
-// Function to create a new node
 Node* createNode(int data);
 
-// Function to insert a node into the binary tree
 void insert(Node** root, int data);
 
-// Function to (in-order traversal)
 void preorderTraversal(Node* root);
 void inorderTraversal(Node* root);
 void postorderTraversal(Node* root);
 
-#endif // TREE_H
+#endif 
